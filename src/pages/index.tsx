@@ -1,10 +1,8 @@
 import * as React from "react";
 
-// data
-
-// markup
 const IndexPage = () => {
-  return (>
+  return (
+    <main>
       <title>Home Page</title>
       <h1>Hellooo</h1>
     </main>
