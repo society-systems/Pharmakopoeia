@@ -3,9 +3,14 @@ module.exports = {
     title: "pharmakopoeia",
   },
   plugins: [
-    "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("node-sass"),
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
