@@ -1,0 +1,369 @@
+ @import "reset.scss";
+
+
+///////////////////////
+////// FONTS /////////
+//////////////////////
+
+
+//Special
+@font-face{ 
+	font-family: "LaylaThuluth"; 
+	src: url("/static/fonts/LaylaThuluth.woff");
+	src: url('/static/fonts/LaylaThuluth.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('/static/fonts/LaylaThuluth.woff') format('woff'), /* Modern Browsers */
+	     url('/static/fonts/LaylaThuluth.otf')  format('opentype');
+}
+
+//Regular
+@font-face{ 
+	font-family: "NotCourierSans"; 
+	src: url("/static/fonts/NotCourierSans.woff");
+	src: url('/static/fonts/NotCourierSans.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('/static/fonts/NotCourierSans.woff') format('woff'), /* Modern Browsers */
+	     url('/static/fonts/NotCourierSans.otf')  format('opentype');
+}
+
+//Bold
+@font-face{ 
+	font-family: "NotCourierSans-Bold"; 
+	src: url("/static/fonts/NotCourierSans-Bold.woff");
+	src: url('/static/fonts/NotCourierSans-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('/static/fonts/NotCourierSans-Bold.woff') format('woff'), /* Modern Browsers */
+	     url('/static/fonts/NotCourierSans-Bold.otf')  format('opentype');
+}
+
+//Headline
+@font-face{ 
+	font-family: "Luminari-Regular"; 
+	src: url("/static/fonts/Luminari-Regular.woff");
+	src: url('/static/fonts/Luminari-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('/static/fonts/Luminari-Regular.woff') format('woff'), /* Modern Browsers */
+	     url('/static/fonts/Luminari-Regular.otf')  format('opentype');
+}
+
+
+@mixin layla_thuluth_font {
+	font-family: 'LaylaThuluth','Montserrat', Arial, Helvetica, sans-serif;
+}
+
+@mixin special_font{
+	@include layla_thuluth_font;
+	font-weight: 700; 
+}
+
+@mixin not_courier_sans_font {
+	font-family: 'NotCourierSans','Montserrat', Arial, Helvetica, sans-serif;
+}
+
+@mixin regular_font{
+	@include not_courier_sans_font;
+	font-weight: 700; 
+}
+
+
+@mixin not_courier_sans_font_bold {
+	font-family: 'NotCourierSans-Bold','Montserrat', Arial, Helvetica, sans-serif;
+}
+
+@mixin bold_font{
+	@include not_courier_sans_font_bold;
+	font-weight: 700; 
+}
+
+@mixin luminari_font {
+	font-family: 'Luminari-Regular','Montserrat', Arial, Helvetica, sans-serif;
+}
+
+@mixin headline_font{
+	@include luminari_font;
+	font-weight: 700; 
+}
+
+
+
+@mixin clearblock {
+	content: " ";
+	display: block; 
+	height: 0; 
+	clear: both;
+}
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+		 -o-transform: $transforms;
+		-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+			transform: $transforms;
+}
+
+///////////////////////
+////// DEBUG //////////
+///////////////////////
+
+body.is-debug {
+	div.center-wrapper {
+		background-image: url("/static/images/grid.png");
+		background-repeat: repeat-y;
+		background-position: 20px 0;
+
+	}
+}
+
+///////////////////////
+////// COLORS ////////
+//////////////////////
+
+$color_bg: #9933FF;
+$color_bg_dark: #000;
+
+$color_text: #F8C8C5;
+$color_text_less: #B9FF00;
+$color_text_bright: #B9FF00;
+$color_text_emphasis: #FF0C00;
+
+
+///////////////////////
+////// SIZES ////////
+//////////////////////
+
+$grid_width: 1180px;
+$grid_column_width: 60px;
+$grid_columns: 15;
+
+$grid_gutter: 20px;
+
+$main_padding: 20px;
+$header_height: 500px;
+
+$baseline_height: 26px;
+
+
+@function grid_columns_width($columns) {
+	@return $columns * $grid_column_width + ($columns - 1) * $grid_gutter;
+}
+
+
+@function grid_columns_pct($columns) {
+	$w: grid_columns_width($columns);
+
+	@return percentage($w / $grid_width);
+}
+
+
+@function grid_columns_gutter_pct($columns, $gutters) {
+	$w: grid_columns_width($columns) + $gutters * $grid_gutter;
+
+	@return percentage($w / $grid_width);
+}
+
+@mixin background-size($params) {
+	-webkit-background-size: $params;
+	-moz-background-size: $params;
+	-o-background-size: $params;
+	background-size: $params;
+}
+
+
+///////////////////////
+/// GENERAL ///////////
+//////////////////////
+
+h1, h2 {
+	@include headline_font;
+	font-size: 1.5em;
+	//line-height: $baseline_height * 2.5;
+	//text-transform: uppercase;
+}
+
+h1 {
+	letter-spacing: 0.3em;
+	//line-height: $baseline_height * 8;
+}
+
+h2 {
+	@include headline_font;
+	font-size: 1.7em;
+	letter-spacing: 0.1em;
+}
+
+p {
+	@include regular_font;
+	margin-bottom: 1em;
+	line-height: $baseline_height;
+	font-size: 1.6em;
+	text-align: left;
+	margin-bottom: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+	vertical-align: middle;
+
+	&.extend_size{
+		width: 100%;
+	}
+}
+
+a {
+	@include headline_font;
+	font-size: 1.5em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: $color_text;
+	text-decoration: none;
+
+	&:hover {
+		color: $color_text_less;
+	}
+}
+
+
+
+///////////////////////
+/// MAIN CONTAINERS ///
+//////////////////////
+
+html {
+	height: 100%;
+	min-width: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: $color_bg;
+	//padding-top: 1.5%;
+
+	@include headline_font;
+	text-align: left;
+	color: $color_text;
+	font-size: 12px;
+	//line-height: $baseline_height;
+}
+
+body > header {
+padding-top: 1%;
+}
+
+section.mainsection {
+	width: 100%;
+	margin: 0 auto;
+
+	h1.special{
+		@include headline_font;
+		&.emphasis-text{
+			color: red;
+		}
+	}
+	.bright-text{
+		color: $color_text_bright;
+	}
+	.rosa-text{
+		color: $color_text;
+	}
+	.emphasis-text{
+		color: $color_text_emphasis;
+	}
+}
+
+div.center-wrapper {
+	max-width: $grid_width;
+	padding: 0 $main_padding 0 $main_padding;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+section#front {
+	
+	position: relative;
+	//height: 90%;
+	
+	//color: #fff;
+	img{
+		margin: auto;
+		width: 40%;
+		height: 100%;
+		display: block;
+		position: relative;
+		//top: 0; left: 5%;
+	}
+}
+
+section#content {
+	h1.special{
+		@include headline_font;
+		&.emphasis-text{
+			color: red;
+		}
+	}
+	.bright-text{
+		color: $color_text_bright;
+	}
+	.rosa-text{
+		color: $color_text;
+	}
+	.emphasis-text{
+		color: $color_text_emphasis;
+	}
+}
+
+.construction{
+	 -webkit-filter: drop-shadow( 4px 4px 3px $color_text_bright);
+     filter: drop-shadow( 4px 4px 3px $color_text_bright);
+}
+
+@keyframes float {
+	0% {
+		//box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		//box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		//box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+///////////////////////
+/// MEDIA QUERIES /////
+///////////////////////
+
+
+
+/////////////////////////////
+/// MEDIUM SCREENS / PADS ///
+/////////////////////////////
+
+@media screen and (max-width: 1200px) { 
+	h1 {
+		font-size: 12em;
+		letter-spacing: 0.2em;
+	}
+	h1 {
+		font-size: 12em;
+		letter-spacing: 0.2em;
+	}	
+}
+
+
+/////////////////////////////
+/// SMALL SCREENS ///////////
+/////////////////////////////
+
+@media screen and (max-width: 630px) {
+	h1 {
+		font-size: 6em;
+	}
+	h2 {
+		padding-top: 0.2em;
+	}
+	section#front {
+	height: 85%;
+	}
+}
