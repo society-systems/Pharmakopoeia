@@ -275,11 +275,12 @@ section#content div.episodes {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   margin-bottom: 10em;
-  height: 50em;
+  height: 47em;
 }
 section#content div.episodes img {
+  width: 97%;
   position: absolute;
 }
 section#content div.episodes img.title {
