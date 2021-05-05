@@ -249,7 +249,7 @@ html {
 
 body {
 	height: 100%;
-	background-color: $color_bg;
+	//background-color: $color_bg;
 	//padding-top: 1.5%;
 
 	@include headline_font;
@@ -258,6 +258,28 @@ body {
 	font-size: 12px;
 	//line-height: $baseline_height;
 }
+
+body {
+      animation: colorchange 75s linear 1s infinite; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 75s linear 0s infinite alternate; /* Chrome and Safari */
+    }
+
+    @keyframes colorchange
+    {
+      0%   {background: #9933ff; color: cyan;}
+      33%  {background: #9600ff; color: magenta;}
+      66%  {background: #6633ff; color: yellow;}
+      100% {background: #0000ff; color: cyan;}
+   }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: #9933ff; color: cyan;}
+      33%  {background: #9600ff; color: magenta;}
+      66%  {background: #6633ff; color: yellow;}
+      100% {background: #0000ff; color: cyan;}
+   }
 
 body > header {
 padding-top: 1%;
