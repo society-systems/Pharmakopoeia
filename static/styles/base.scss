@@ -126,7 +126,7 @@ $color_text_emphasis: #FF0C00;
 ////// SIZES ////////
 //////////////////////
 
-$grid_width: 1180px;
+$grid_width: 1000px;
 $grid_column_width: 60px;
 $grid_columns: 15;
 
@@ -186,13 +186,15 @@ h2 {
 	letter-spacing: 0.1em;
 }
 
+
 p {
 	@include regular_font;
 	margin-bottom: 1em;
 	line-height: $baseline_height;
-	font-size: 1.6em;
+	font-size: 1.8em;
 	text-align: left;
 	margin-bottom: 0;
+	padding-bottom: 2em;
 }
 
 img {
@@ -219,6 +221,21 @@ a {
 	}
 }
 
+
+.special{
+	@include special_font;
+}
+
+
+.bright-text{
+	color: $color_text_bright;
+}
+.rosa-text{
+	color: $color_text;
+}
+.emphasis-text{
+	color: $color_text_emphasis;
+}
 
 
 ///////////////////////
@@ -256,15 +273,7 @@ section.mainsection {
 			color: red;
 		}
 	}
-	.bright-text{
-		color: $color_text_bright;
-	}
-	.rosa-text{
-		color: $color_text;
-	}
-	.emphasis-text{
-		color: $color_text_emphasis;
-	}
+	
 }
 
 div.center-wrapper {
@@ -274,20 +283,47 @@ div.center-wrapper {
 	position: relative;
 }
 
+.divider{
+	height: 6em;
+    margin: auto;
+    display: block;
+    margin-bottom: 7em;
+    margin-top: 7em;
+    &.divider2{
+    	height: 14em;
+    }
+}
+
+.download-overlay{
+		float: right;
+    	margin-right: 24em;
+		
+    	display: block;
+    	height: 3.5em;
+    	position: relative;
+    	top: 28em;
+    	&.glow-more{
+    		-webkit-filter: drop-shadow( 0 0 4mm $color_text_bright);
+     		filter: drop-shadow( 0 0 4mm $color_text_bright);
+    	}
+}
 
 section#front {
-	
 	position: relative;
-	//height: 90%;
-	
-	//color: #fff;
 	img{
 		margin: auto;
-		width: 40%;
+		width: 70%;
 		height: 100%;
 		display: block;
 		position: relative;
 		//top: 0; left: 5%;
+	}
+	.front-overlay{
+		position: absolute;
+    	top: 24em;
+    	float: right;
+    	right: 2.5em;
+    	width: 40%;
 	}
 }
 
@@ -298,18 +334,46 @@ section#content {
 			color: red;
 		}
 	}
-	.bright-text{
-		color: $color_text_bright;
+	img.download{
+		display: block;
+		margin: auto;
 	}
-	.rosa-text{
-		color: $color_text;
+
+	ul{
+		margin-bottom: 3em;
+		@include bold_font;
+		li{
+			display: flex;
+			padding-bottom: 1em;
+			span.left{
+				position: absolute;
+    			font-size: 1.8em;
+    			float: left;	
+			}
+			span.right{
+				font-size: 1.8em;
+    			float: right;
+    			margin-left: 27em;	
+			}
+		}
 	}
-	.emphasis-text{
-		color: $color_text_emphasis;
+
+	div.episodes{
+		margin-bottom: 10em;
+    	height: 50em;
+		img{
+			position: absolute;
+			&.title{
+				    padding-top: 16%;
+				    left: 7%;
+				    width: 90%;
+			}
+		}
 	}
 }
 
-.construction{
+.glow{
+	animation: float 6s ease-in-out infinite;
 	 -webkit-filter: drop-shadow( 4px 4px 3px $color_text_bright);
      filter: drop-shadow( 4px 4px 3px $color_text_bright);
 }

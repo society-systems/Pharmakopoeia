@@ -114,9 +114,10 @@ p {
   font-weight: 700;
   margin-bottom: 1em;
   line-height: 26px;
-  font-size: 1.6em;
+  font-size: 1.8em;
   text-align: left;
   margin-bottom: 0;
+  padding-bottom: 2em;
 }
 
 img {
@@ -140,6 +141,23 @@ a {
 }
 a:hover {
   color: #B9FF00;
+}
+
+.special {
+  font-family: "LaylaThuluth", "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.bright-text {
+  color: #B9FF00;
+}
+
+.rosa-text {
+  color: #F8C8C5;
+}
+
+.emphasis-text {
+  color: #FF0C00;
 }
 
 html {
@@ -172,21 +190,36 @@ section.mainsection h1.special {
 section.mainsection h1.special.emphasis-text {
   color: red;
 }
-section.mainsection .bright-text {
-  color: #B9FF00;
-}
-section.mainsection .rosa-text {
-  color: #F8C8C5;
-}
-section.mainsection .emphasis-text {
-  color: #FF0C00;
-}
 
 div.center-wrapper {
-  max-width: 1180px;
+  max-width: 1000px;
   padding: 0 20px 0 20px;
   margin: 0 auto;
   position: relative;
+}
+
+.divider {
+  height: 6em;
+  margin: auto;
+  display: block;
+  margin-bottom: 7em;
+  margin-top: 7em;
+}
+.divider.divider2 {
+  height: 14em;
+}
+
+.download-overlay {
+  float: right;
+  margin-right: 24em;
+  display: block;
+  height: 3.5em;
+  position: relative;
+  top: 28em;
+}
+.download-overlay.glow-more {
+  -webkit-filter: drop-shadow(0 0 4mm #B9FF00);
+  filter: drop-shadow(0 0 4mm #B9FF00);
 }
 
 section#front {
@@ -194,10 +227,17 @@ section#front {
 }
 section#front img {
   margin: auto;
-  width: 40%;
+  width: 70%;
   height: 100%;
   display: block;
   position: relative;
+}
+section#front .front-overlay {
+  position: absolute;
+  top: 24em;
+  float: right;
+  right: 2.5em;
+  width: 40%;
 }
 
 section#content h1.special {
@@ -207,17 +247,44 @@ section#content h1.special {
 section#content h1.special.emphasis-text {
   color: red;
 }
-section#content .bright-text {
-  color: #B9FF00;
+section#content img.download {
+  display: block;
+  margin: auto;
 }
-section#content .rosa-text {
-  color: #F8C8C5;
+section#content ul {
+  margin-bottom: 3em;
+  font-family: "NotCourierSans-Bold", "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 700;
 }
-section#content .emphasis-text {
-  color: #FF0C00;
+section#content ul li {
+  display: flex;
+  padding-bottom: 1em;
+}
+section#content ul li span.left {
+  position: absolute;
+  font-size: 1.8em;
+  float: left;
+}
+section#content ul li span.right {
+  font-size: 1.8em;
+  float: right;
+  margin-left: 27em;
+}
+section#content div.episodes {
+  margin-bottom: 10em;
+  height: 50em;
+}
+section#content div.episodes img {
+  position: absolute;
+}
+section#content div.episodes img.title {
+  padding-top: 16%;
+  left: 7%;
+  width: 90%;
 }
 
-.construction {
+.glow {
+  animation: float 6s ease-in-out infinite;
   -webkit-filter: drop-shadow(4px 4px 3px #B9FF00);
   filter: drop-shadow(4px 4px 3px #B9FF00);
 }
