@@ -359,6 +359,12 @@ section#content {
 	}
 
 	div.episodes{
+		background-image: url("/static/images/episodes/00.jpg");
+  		background-attachment: fixed;
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+
 		margin-bottom: 10em;
     	height: 50em;
 		img{
