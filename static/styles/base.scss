@@ -298,14 +298,14 @@ body {
       100% {background: #0000ff; color: cyan;}
    }
 
-	@keyframes colorchange
+	@keyframes colorchange-remedies
     {
       0%   {background: #FF0C00; color: cyan;}
       50%  {background: #0000ff; color: yellow;}
       100% {background: #FF0C00; color: cyan;}
    }
 
-    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    @-webkit-keyframes colorchange-remedies /* Safari and Chrome - necessary duplicate */
     {
       0%   {background: #FF0C00; color: cyan;}
       50%  {background:#0000ff; color: yellow;}

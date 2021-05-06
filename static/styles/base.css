@@ -235,7 +235,7 @@ body#remedies {
     color: cyan;
   }
 }
-@keyframes colorchange {
+@keyframes colorchange-remedies {
   0% {
     background: #FF0C00;
     color: cyan;
@@ -249,7 +249,7 @@ body#remedies {
     color: cyan;
   }
 }
-@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ {
+@-webkit-keyframes colorchange-remedies /* Safari and Chrome - necessary duplicate */ {
   0% {
     background: #FF0C00;
     color: cyan;
