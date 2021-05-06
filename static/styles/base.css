@@ -224,6 +224,7 @@ body {
   }
 }
 body > header {
+  background-color: #9933FF;
   bottom: 0;
   position: fixed;
   padding: 0.5em 0 0.5em 0;
@@ -234,15 +235,15 @@ body > header {
   filter: drop-shadow(0 0 4mm #B9FF00);
 }
 
-nav.mainnav ul {
-  display: block !important;
-}
 nav.mainnav ul li {
   display: block;
   float: left;
   line-height: 18px;
   margin-left: 60px;
   vertical-align: -webkit-baseline-middle !important;
+}
+nav.mainnav ul li#preface {
+  margin-left: 0;
 }
 nav.mainnav ul li span.menu {
   -webkit-filter: drop-shadow(0 0 8px #B9FF00);
@@ -251,6 +252,7 @@ nav.mainnav ul li span.menu {
 }
 nav.mainnav ul li span.menu#preface {
   display: inline-block !important;
+  padding-left: 0;
 }
 nav.mainnav ul li img {
   height: 5em;

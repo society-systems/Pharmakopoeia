@@ -290,7 +290,7 @@ body > header {
 }
 
 body > header {
-	//background-color: $color_bg;
+	background-color: $color_bg;
 	bottom: 0;
     position: fixed;
 	padding: 0.5em 0 0.5em 0;
@@ -305,7 +305,7 @@ body > header {
 
 nav.mainnav {
 	ul {
-		display: block !important;
+		//display: block !important;
 		li {
 			display: block;
 			float: left;
@@ -315,12 +315,17 @@ nav.mainnav {
 
 			vertical-align: -webkit-baseline-middle !important;
 
+			&#preface{
+					margin-left: 0;
+				}
+
 			span.menu{
 				-webkit-filter: drop-shadow( 0 0 8px $color_text_bright);
      			filter: drop-shadow( 0 0 8px $color_text_bright);
 				display: inline-grid;
 				&#preface{
 					    display: inline-block !important;
+					    padding-left: 0;
 				}
 			}
 
