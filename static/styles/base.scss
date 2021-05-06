@@ -222,6 +222,10 @@ a {
 }
 
 
+b {
+	@include bold_font;
+}
+
 .special{
 	@include special_font;
 }
@@ -334,7 +338,7 @@ section#front {
 	position: relative;
 	img{
 		margin: auto;
-		width: 70%;
+		width: 100%;
 		height: 100%;
 		display: block;
 		position: relative;
@@ -363,7 +367,7 @@ section#content {
 
 	ul{
 		margin-bottom: 3em;
-		@include bold_font;
+		@include regular_font;
 		li{
 			display: flex;
 			padding-bottom: 1em;
@@ -403,9 +407,25 @@ section#content {
 }
 
 .glow{
-	animation: float 6s ease-in-out infinite;
+	//animation: float 6s ease-in-out infinite;
+	
 	 -webkit-filter: drop-shadow( 4px 4px 3px $color_text_bright);
      filter: drop-shadow( 4px 4px 3px $color_text_bright);
+}
+
+.zoomIn{
+	animation: zoomin 10s infinite ;
+	&.header{
+		position: absolute !important;
+		float: right;
+    	right: 6%;
+	}
+}
+
+
+
+.zoomOut{
+	animation: zoomout 10s infinite ;
 }
 
 @keyframes float {
@@ -422,6 +442,32 @@ section#content {
 		transform: translatey(0px);
 	}
 }
+
+
+@keyframes zoomout {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(1.2,1.2);
+    }
+    50% {
+        transform: scale(1,1);
+    }
+    100% {
+        transform: scale(1.2,1.2);
+    }
+}
+
 
 
 ///////////////////////

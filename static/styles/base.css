@@ -143,6 +143,11 @@ a:hover {
   color: #B9FF00;
 }
 
+b {
+  font-family: "NotCourierSans-Bold", "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
 .special {
   font-family: "LaylaThuluth", "Montserrat", Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -270,7 +275,7 @@ section#front {
 }
 section#front img {
   margin: auto;
-  width: 70%;
+  width: 100%;
   height: 100%;
   display: block;
   position: relative;
@@ -296,7 +301,7 @@ section#content img.download {
 }
 section#content ul {
   margin-bottom: 3em;
-  font-family: "NotCourierSans-Bold", "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: "NotCourierSans", "Montserrat", Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 section#content ul li {
@@ -333,9 +338,21 @@ section#content div.episodes img.title {
 }
 
 .glow {
-  animation: float 6s ease-in-out infinite;
   -webkit-filter: drop-shadow(4px 4px 3px #B9FF00);
   filter: drop-shadow(4px 4px 3px #B9FF00);
+}
+
+.zoomIn {
+  animation: zoomin 10s infinite;
+}
+.zoomIn.header {
+  position: absolute !important;
+  float: right;
+  right: 6%;
+}
+
+.zoomOut {
+  animation: zoomout 10s infinite;
 }
 
 @keyframes float {
@@ -347,6 +364,28 @@ section#content div.episodes img.title {
   }
   100% {
     transform: translatey(0px);
+  }
+}
+@keyframes zoomout {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes zoomin {
+  0% {
+    transform: scale(1.2, 1.2);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.2, 1.2);
   }
 }
 @media screen and (max-width: 1200px) {
