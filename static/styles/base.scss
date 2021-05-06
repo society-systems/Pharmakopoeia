@@ -290,7 +290,7 @@ body > header {
 }
 
 body > header {
-	background-color: $color_bg;
+	background-color: $color_text_emphasis;
 	bottom: 0;
     position: fixed;
 	padding: 0.5em 0 0.5em 0;
@@ -320,8 +320,7 @@ nav.mainnav {
 				}
 
 			span.menu{
-				-webkit-filter: drop-shadow( 0 0 8px $color_text_bright);
-     			filter: drop-shadow( 0 0 8px $color_text_bright);
+				
 				display: inline-grid;
 				&#preface{
 					    display: inline-block !important;
@@ -344,6 +343,8 @@ nav.mainnav {
 
 				vertical-align: top !important;
 
+				//color: $color_text_less;
+
 				&:hover {
 					color: $color_text_less;
 					text-decoration: none;
@@ -352,13 +353,18 @@ nav.mainnav {
 					font-size: 4.1em;	
 				}
 			}
-		}
-	}
-	div.social{
-		float: right;
-		a.fa {
-			padding-left: 1em;
-			font-size: 1.5em;
+
+			button.player{
+				float: right;
+				background: none;
+    			border: none;
+    			&:hover{
+    				cursor: pointer;
+    			}
+				img{
+					height: 3em;
+				}
+			}
 		}
 	}
 }

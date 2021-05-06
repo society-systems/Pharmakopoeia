@@ -224,7 +224,7 @@ body {
   }
 }
 body > header {
-  background-color: #9933FF;
+  background-color: #FF0C00;
   bottom: 0;
   position: fixed;
   padding: 0.5em 0 0.5em 0;
@@ -246,8 +246,6 @@ nav.mainnav ul li#preface {
   margin-left: 0;
 }
 nav.mainnav ul li span.menu {
-  -webkit-filter: drop-shadow(0 0 8px #B9FF00);
-  filter: drop-shadow(0 0 8px #B9FF00);
   display: inline-grid;
 }
 nav.mainnav ul li span.menu#preface {
@@ -273,12 +271,16 @@ nav.mainnav ul li a:hover {
 nav.mainnav ul li a#preface {
   font-size: 4.1em;
 }
-nav.mainnav div.social {
+nav.mainnav ul li button.player {
   float: right;
+  background: none;
+  border: none;
 }
-nav.mainnav div.social a.fa {
-  padding-left: 1em;
-  font-size: 1.5em;
+nav.mainnav ul li button.player:hover {
+  cursor: pointer;
+}
+nav.mainnav ul li button.player img {
+  height: 3em;
 }
 
 section.mainsection {

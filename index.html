@@ -32,7 +32,10 @@
 					<li><img src="/static/images/vase.png" class="emoji" id="vase"/><span class="menu"><a href="/remedies">ON THE COMMONS ORIGINS <br>OF REMEDIES & MEDIA</a></span><img src="/static/images/vase.png" class="emoji" id="vase"/></li>
 					<li><img src="/static/images/vase.png" class="emoji" id="vase"/><span class="menu"><a href="/hypervideo">HYPERVIDEO <br>ANTI-ADS</a></span><img src="/static/images/vase.png" class="emoji" id="vase"/></li>
 					<li><img src="/static/images/vase.png" class="emoji" id="vase"/><span class="menu"><a href="/compendium">TRANS-MILLENIAL <br> COMPENDIUM 1.0</a></span><img src="/static/images/vase.png" class="emoji" id="vase"/></li>
+					<li><button class="player" onclick="playAudio()" type="button"><img src="/static/images/play.png" class="player glow" id="player"/></button>
+					<button class="player" onclick="pauseAudio()" type="button">stop</button></li>
 				</ul>
+				
 			</nav>
 		
 	</header>
@@ -157,5 +160,21 @@
 			
 		</div>
 	</section>
+	<audio id="webScore">
+  	<source src="/static/audio/web-score.ogg" type="audio/ogg">
+  	<source src="/static/audio/web-score.mp3" type="audio/mpeg">
+  	Your browser does not support the audio element.
+	</audio>
+	<script>
+	var x = document.getElementById("webScore"); 
+	
+	function playAudio() { 
+	  x.play(); 
+	} 
+	
+	function pauseAudio() { 
+	  x.pause(); 
+	} 
+</script>
 </body>
 </html>
