@@ -246,6 +246,7 @@ nav.mainnav ul li#preface {
   margin-left: 0;
 }
 nav.mainnav ul li span.menu {
+  vertical-align: middle;
   display: inline-grid;
 }
 nav.mainnav ul li span.menu#preface {
@@ -263,6 +264,7 @@ nav.mainnav ul li a {
   letter-spacing: 0.03em;
   text-decoration: none;
   vertical-align: top !important;
+  color: #B9FF00;
 }
 nav.mainnav ul li a:hover {
   color: #B9FF00;
@@ -293,6 +295,11 @@ section.mainsection h1.special {
 }
 section.mainsection h1.special.emphasis-text {
   color: red;
+}
+section.mainsection.last {
+  margin-bottom: 14em;
+  height: inherit;
+  display: inline-table;
 }
 
 div.center-wrapper {
@@ -469,10 +476,16 @@ div.header-frame-test.zoomOut {
     transform: scale(1.2, 1.2);
   }
 }
-@media screen and (max-width: 2560px) {
+@media screen and (max-width: 2560px) and (min-width: 1441px) {
   nav.mainnav ul {
     display: table;
     margin: auto;
+  }
+
+  .front-overlay {
+    top: 68em !important;
+    right: 5em !important;
+    font-size: 1.1em !important;
   }
 }
 @media screen and (max-width: 1200px) {

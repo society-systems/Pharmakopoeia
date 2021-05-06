@@ -320,7 +320,7 @@ nav.mainnav {
 				}
 
 			span.menu{
-				
+				vertical-align: middle;
 				display: inline-grid;
 				&#preface{
 					    display: inline-block !important;
@@ -343,7 +343,7 @@ nav.mainnav {
 
 				vertical-align: top !important;
 
-				//color: $color_text_less;
+				color: $color_text_less;
 
 				&:hover {
 					color: $color_text_less;
@@ -379,6 +379,12 @@ section.mainsection {
 		&.emphasis-text{
 			color: red;
 		}
+	}
+
+	&.last{
+		margin-bottom: 14em;
+		height: inherit;
+		    display: inline-table;
 	}
 	
 }
@@ -591,13 +597,20 @@ div.header-frame-test{
 /// MEDIUM SCREENS / PADS ///
 /////////////////////////////
 
-@media screen and (max-width: 2560px) { 
+@media screen and (max-width: 2560px) and (min-width: 1441px) {
 	nav.mainnav{
 		ul{
 			display: table;
     		margin: auto;
 		}
 	}
+	.front-overlay{
+	    top: 68em !important;
+	    right: 5em !important;
+	    
+	    font-size: 1.1em !important;
+	}
+	
 }
 
 
