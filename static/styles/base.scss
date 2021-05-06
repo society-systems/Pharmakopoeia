@@ -286,7 +286,7 @@ body {
    }
 
 body > header {
-padding-top: 1%;
+//padding-top: 1%;
 }
 
 section.mainsection {
@@ -336,6 +336,8 @@ div.center-wrapper {
 
 section#front {
 	position: relative;
+	overflow: hidden;
+	    height: inherit;
 	img{
 		margin: auto;
 		width: 100%;
@@ -345,11 +347,12 @@ section#front {
 		//top: 0; left: 5%;
 	}
 	.front-overlay{
-		position: absolute;
-    	top: 24em;
-    	float: right;
-    	right: 2.5em;
-    	width: 40%;
+	position: absolute;
+    top: 59em;
+    float: right;
+    right: 7em;
+    width: 40%;
+    font-size: 0.7em;
 	}
 }
 
@@ -406,6 +409,30 @@ section#content {
 	}
 }
 
+div.header-frame-test{
+		top: -2em;
+		background-image: url("/static/images/0headerAR.png");
+  		background-attachment: fixed;
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		//background-size: cover;
+  		background-size: contain;
+
+		margin-bottom: 10em;
+    	//height: 47em;
+    	&.zoomOut{
+			background-image: url("/static/images/0headerEN.png");
+		}
+	}
+
+
+
+.header-frame{
+	position: absolute !important;
+    height: auto !important;
+    top: 0;
+}
+
 .glow{
 	//animation: float 6s ease-in-out infinite;
 	
@@ -414,9 +441,11 @@ section#content {
 }
 
 .zoomIn{
-	animation: zoomin 10s infinite ;
+	animation: zoomin 20s infinite ;
 	&.header{
-		position: absolute !important;
+		height: inherit;
+		width: 100%;
+		position: initial;
 		float: right;
     	right: 6%;
 	}
@@ -425,7 +454,7 @@ section#content {
 
 
 .zoomOut{
-	animation: zoomout 10s infinite ;
+	animation: zoomout 20s infinite ;
 }
 
 @keyframes float {
@@ -446,13 +475,13 @@ section#content {
 
 @keyframes zoomout {
     0% {
-        transform: scale(1,1);
+        transform: scale(0.5,0.5);
     }
     50% {
-        transform: scale(1.2,1.2);
+        transform: scale(1.1,1.1);
     }
     100% {
-        transform: scale(1,1);
+        transform: scale(0.5,0.5);
     }
 }
 
@@ -461,7 +490,7 @@ section#content {
         transform: scale(1.2,1.2);
     }
     50% {
-        transform: scale(1,1);
+        transform: scale(0.8,0.8);
     }
     100% {
         transform: scale(1.2,1.2);

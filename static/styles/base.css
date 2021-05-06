@@ -223,10 +223,6 @@ body {
     color: cyan;
   }
 }
-body > header {
-  padding-top: 1%;
-}
-
 section.mainsection {
   width: 100%;
   margin: 0 auto;
@@ -272,6 +268,8 @@ div.center-wrapper {
 
 section#front {
   position: relative;
+  overflow: hidden;
+  height: inherit;
 }
 section#front img {
   margin: auto;
@@ -282,10 +280,11 @@ section#front img {
 }
 section#front .front-overlay {
   position: absolute;
-  top: 24em;
+  top: 59em;
   float: right;
-  right: 2.5em;
+  right: 7em;
   width: 40%;
+  font-size: 0.7em;
 }
 
 section#content h1.special {
@@ -337,22 +336,43 @@ section#content div.episodes img.title {
   width: 90%;
 }
 
+div.header-frame-test {
+  top: -2em;
+  background-image: url("/static/images/0headerAR.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 10em;
+}
+div.header-frame-test.zoomOut {
+  background-image: url("/static/images/0headerEN.png");
+}
+
+.header-frame {
+  position: absolute !important;
+  height: auto !important;
+  top: 0;
+}
+
 .glow {
   -webkit-filter: drop-shadow(4px 4px 3px #B9FF00);
   filter: drop-shadow(4px 4px 3px #B9FF00);
 }
 
 .zoomIn {
-  animation: zoomin 10s infinite;
+  animation: zoomin 20s infinite;
 }
 .zoomIn.header {
-  position: absolute !important;
+  height: inherit;
+  width: 100%;
+  position: initial;
   float: right;
   right: 6%;
 }
 
 .zoomOut {
-  animation: zoomout 10s infinite;
+  animation: zoomout 20s infinite;
 }
 
 @keyframes float {
@@ -368,13 +388,13 @@ section#content div.episodes img.title {
 }
 @keyframes zoomout {
   0% {
-    transform: scale(1, 1);
+    transform: scale(0.5, 0.5);
   }
   50% {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.1, 1.1);
   }
   100% {
-    transform: scale(1, 1);
+    transform: scale(0.5, 0.5);
   }
 }
 @keyframes zoomin {
@@ -382,7 +402,7 @@ section#content div.episodes img.title {
     transform: scale(1.2, 1.2);
   }
   50% {
-    transform: scale(1, 1);
+    transform: scale(0.8, 0.8);
   }
   100% {
     transform: scale(1.2, 1.2);
