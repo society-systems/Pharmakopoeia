@@ -121,6 +121,8 @@ $color_text_less: #B9FF00;
 $color_text_bright: #B9FF00;
 $color_text_emphasis: #FF0C00;
 
+$color_text_blue: #FF0C00;
+
 
 ///////////////////////
 ////// SIZES ////////
@@ -241,6 +243,10 @@ b {
 	color: $color_text_emphasis;
 }
 
+.blue-text {
+	color: $color_text_blue;
+}
+
 
 ///////////////////////
 /// MAIN CONTAINERS ///
@@ -267,6 +273,13 @@ body {
       animation: colorchange 75s linear 1s infinite; /* animation-name followed by duration in seconds*/
          /* you could also use milliseconds (ms) or something like 2.5s */
       -webkit-animation: colorchange 75s linear 0s infinite alternate; /* Chrome and Safari */
+
+      &#remedies{
+      	animation: colorchange-remedies 75s linear 1s infinite; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange-remedies 75s linear 0s infinite alternate; /* Chrome and Safari */
+      }
+
     }
 
     @keyframes colorchange
@@ -283,6 +296,20 @@ body {
       33%  {background: #9600ff; color: magenta;}
       66%  {background: #6633ff; color: yellow;}
       100% {background: #0000ff; color: cyan;}
+   }
+
+	@keyframes colorchange
+    {
+      0%   {background: #FF0C00; color: cyan;}
+      50%  {background: #0000ff; color: yellow;}
+      100% {background: #FF0C00; color: cyan;}
+   }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: #FF0C00; color: cyan;}
+      50%  {background:#0000ff; color: yellow;}
+      100% {background: #FF0C00; color: cyan;}
    }
 
 body > header {
@@ -386,6 +413,24 @@ section.mainsection {
 		height: inherit;
 		    display: inline-table;
 	}
+
+	&.remedies{
+		margin-top: 20%;
+		h1{
+			margin: auto;
+    		display: table;
+		}
+		h2{
+			margin: auto;
+    		display: table;
+    		padding-bottom: 4em;
+		}
+	}
+	&.remedies-list{
+		ul{
+			font-size: 2em;
+		}
+	}
 	
 }
 
@@ -404,6 +449,9 @@ div.center-wrapper {
     margin-top: 7em;
     &.divider2{
     	height: 14em;
+    }
+    &.divider3{
+    	height: 100%;
     }
 }
 

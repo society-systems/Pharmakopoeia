@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* thank you! http://meyerweb.com/eric/tools/css/reset/ */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -165,6 +166,10 @@ b {
   color: #FF0C00;
 }
 
+.blue-text  {
+  color: #FF0C00;
+}
+
 html {
   height: 100%;
   min-width: 100%;
@@ -184,6 +189,13 @@ body {
   /* animation-name followed by duration in seconds*/
   /* you could also use milliseconds (ms) or something like 2.5s */
   -webkit-animation: colorchange 75s linear 0s infinite alternate;
+  /* Chrome and Safari */
+}
+body#remedies {
+  animation: colorchange-remedies 75s linear 1s infinite;
+  /* animation-name followed by duration in seconds*/
+  /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange-remedies 75s linear 0s infinite alternate;
   /* Chrome and Safari */
 }
 
@@ -220,6 +232,34 @@ body {
   }
   100% {
     background: #0000ff;
+    color: cyan;
+  }
+}
+@keyframes colorchange {
+  0% {
+    background: #FF0C00;
+    color: cyan;
+  }
+  50% {
+    background: #0000ff;
+    color: yellow;
+  }
+  100% {
+    background: #FF0C00;
+    color: cyan;
+  }
+}
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ {
+  0% {
+    background: #FF0C00;
+    color: cyan;
+  }
+  50% {
+    background: #0000ff;
+    color: yellow;
+  }
+  100% {
+    background: #FF0C00;
     color: cyan;
   }
 }
@@ -301,6 +341,21 @@ section.mainsection.last {
   height: inherit;
   display: inline-table;
 }
+section.mainsection.remedies {
+  margin-top: 20%;
+}
+section.mainsection.remedies h1 {
+  margin: auto;
+  display: table;
+}
+section.mainsection.remedies h2 {
+  margin: auto;
+  display: table;
+  padding-bottom: 4em;
+}
+section.mainsection.remedies-list ul {
+  font-size: 2em;
+}
 
 div.center-wrapper {
   max-width: 1000px;
@@ -318,6 +373,9 @@ div.center-wrapper {
 }
 .divider.divider2 {
   height: 14em;
+}
+.divider.divider3 {
+  height: 100%;
 }
 
 .download-overlay {
