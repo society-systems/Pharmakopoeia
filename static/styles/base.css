@@ -198,6 +198,13 @@ body#remedies {
   -webkit-animation: colorchange-remedies 75s linear 0s infinite alternate;
   /* Chrome and Safari */
 }
+body#remedies h1 {
+  font-size: 4em;
+  text-align: center;
+}
+body#remedies h2 {
+  text-align: center;
+}
 
 @keyframes colorchange {
   0% {
@@ -282,7 +289,7 @@ nav.mainnav ul li {
   margin-left: 60px;
   vertical-align: -webkit-baseline-middle !important;
 }
-nav.mainnav ul li#preface {
+nav.mainnav ul li#player {
   margin-left: 0;
 }
 nav.mainnav ul li span.menu {
@@ -546,15 +553,31 @@ div.header-frame-test.zoomOut {
     font-size: 1.1em !important;
   }
 }
-@media screen and (max-width: 1200px) {
-  h1 {
-    font-size: 12em;
-    letter-spacing: 0.2em;
+@media screen and (max-width: 1025px) {
+  header {
+    font-size: 0.2em;
   }
 
-  h1 {
-    font-size: 12em;
-    letter-spacing: 0.2em;
+  .front-overlay {
+    top: 61em !important;
+    right: 5em !important;
+    font-size: 0.5em !important;
+  }
+
+  .zoomIn.header {
+    top: -18em;
+    position: absolute;
+  }
+
+  .zoomOut.header {
+    position: inherit;
+    top: 13em;
+    height: inherit;
+  }
+}
+@media screen and (max-width: 768px) {
+  body#remedies h1 {
+    font-size: 2.5em;
   }
 }
 @media screen and (max-width: 630px) {

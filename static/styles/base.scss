@@ -278,6 +278,13 @@ body {
       	animation: colorchange-remedies 75s linear 1s infinite; /* animation-name followed by duration in seconds*/
          /* you could also use milliseconds (ms) or something like 2.5s */
       -webkit-animation: colorchange-remedies 75s linear 0s infinite alternate; /* Chrome and Safari */
+      h1{
+      	font-size: 4em;
+      	text-align: center;
+      	}
+      h2{
+      	text-align: center;
+      	}
       }
 
     }
@@ -343,6 +350,10 @@ nav.mainnav {
 			vertical-align: -webkit-baseline-middle !important;
 
 			&#preface{
+					//margin-left: 0;
+				}
+
+			&#player{
 					margin-left: 0;
 				}
 
@@ -662,15 +673,30 @@ div.header-frame-test{
 }
 
 
-@media screen and (max-width: 1200px) { 
-	h1 {
-		font-size: 12em;
-		letter-spacing: 0.2em;
+@media screen and (max-width: 1025px) { 
+	header{
+		font-size: 0.2em;
 	}
-	h1 {
-		font-size: 12em;
-		letter-spacing: 0.2em;
-	}	
+	.front-overlay {
+    	top: 61em !important;
+    	right: 5em !important;
+    	font-size: 0.5em !important;
+	}
+	.zoomIn.header {
+		top: -18em;
+    	position: absolute;
+	}
+	.zoomOut.header {
+		position: inherit;
+    	top: 13em;
+    	height: inherit;
+	}
+}
+
+@media screen and (max-width: 768px) { 
+	body#remedies h1 {
+    font-size: 2.5em;
+	}
 }
 
 
