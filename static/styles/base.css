@@ -516,7 +516,23 @@ div.header-frame-test.zoomOut {
   display: none;
 }
 
+.small-header {
+  height: 8em;
+  display: block;
+  margin: auto;
+}
+.small-header#headerAR {
+  position: absolute;
+  left: 45%;
+}
+
 .glow {
+  -webkit-filter: drop-shadow(4px 4px 3px #B9FF00);
+  filter: drop-shadow(4px 4px 3px #B9FF00);
+}
+
+.glow-flicker {
+  animation: flicker 1.5s infinite;
   -webkit-filter: drop-shadow(4px 4px 3px #B9FF00);
   filter: drop-shadow(4px 4px 3px #B9FF00);
 }
@@ -536,6 +552,20 @@ div.header-frame-test.zoomOut {
   animation: zoomout 20s infinite;
 }
 
+@keyframes flicker {
+  0% {
+    -webkit-filter: drop-shadow(4px 4px 3px #B9FF00);
+    filter: drop-shadow(4px 4px 3px #B9FF00);
+  }
+  50% {
+    -webkit-filter: drop-shadow(2px 2px 0px #B9FF00);
+    filter: drop-shadow(2px 2px 0px #B9FF00);
+  }
+  100% {
+    -webkit-filter: drop-shadow(4px 4px 3px #B9FF00);
+    filter: drop-shadow(4px 4px 3px #B9FF00);
+  }
+}
 @keyframes float {
   0% {
     transform: translatey(0px);

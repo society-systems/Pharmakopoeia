@@ -619,18 +619,30 @@ div.header-frame-test{
     }
 }
 
+.small-header{
+	height: 8em;
+    display: block;
+    margin: auto;
+    &#headerAR{
+    	    position: absolute;
+    		left: 45%;
+    }
+}
 
 
 
 .glow{
-	//animation: float 6s ease-in-out infinite;
+	//animation: flicker 1.5s ease-in-out infinite;
 	
 	 -webkit-filter: drop-shadow( 4px 4px 3px $color_text_bright);
      filter: drop-shadow( 4px 4px 3px $color_text_bright);
 }
 
 .glow-flicker{
+	animation: flicker 1.5s  infinite;
 	
+	-webkit-filter: drop-shadow( 4px 4px 3px $color_text_bright);
+    filter: drop-shadow( 4px 4px 3px $color_text_bright);
 }
 
 
@@ -652,6 +664,21 @@ div.header-frame-test{
 
 .zoomOut{
 	animation: zoomout 20s infinite ;
+}
+
+@keyframes flicker {
+	0% {
+		-webkit-filter: drop-shadow( 4px 4px 3px $color_text_bright);
+     	filter: drop-shadow( 4px 4px 3px $color_text_bright);
+	}
+	50% {
+		-webkit-filter: drop-shadow( 2px 2px 0px $color_text_bright);
+     filter: drop-shadow( 2px 2px 0px $color_text_bright);
+	}
+	100% {
+		-webkit-filter: drop-shadow( 4px 4px 3px $color_text_bright);
+     	filter: drop-shadow( 4px 4px 3px $color_text_bright);
+	}
 }
 
 @keyframes float {
