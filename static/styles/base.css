@@ -455,9 +455,9 @@ section#content div.episodes {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   margin-bottom: 10em;
-  height: 47em;
+  height: 46em;
 }
 section#content div.episodes img {
   width: 97%;
@@ -548,7 +548,11 @@ div.header-frame-test.zoomOut {
     transform: scale(1.2, 1.2);
   }
 }
-@media screen and (max-width: 2560px) and (min-width: 1441px) {
+@media (min-width: 1441px) and (max-width: 2561px) {
+  div.center-wrapper {
+    max-width: 54%;
+  }
+
   nav.mainnav ul {
     display: table;
     margin: auto;
@@ -559,8 +563,28 @@ div.header-frame-test.zoomOut {
     right: 5em !important;
     font-size: 1.1em !important;
   }
+
+  div.episodes {
+    height: 64em !important;
+  }
+  div.episodes img.frame {
+    width: 98% !important;
+  }
 }
 @media screen and (max-width: 1025px) {
+  nav.mainnav ul li {
+    margin-left: 2%;
+  }
+  nav.mainnav ul li#preface img {
+    vertical-align: bottom;
+  }
+  nav.mainnav ul li span.menu#preface {
+    padding-top: 2em;
+  }
+  nav.mainnav ul li span.menu#preface a {
+    font-size: 21.1em;
+  }
+
   header {
     font-size: 0.2em;
   }
@@ -581,6 +605,12 @@ div.header-frame-test.zoomOut {
     top: 13em;
     height: inherit;
   }
+
+  div.episodes {
+    background-size: cover;
+    margin-bottom: 10em;
+    height: 46em;
+  }
 }
 @media screen and (max-width: 768px) {
   body#remedies h1 {
@@ -591,7 +621,11 @@ div.header-frame-test.zoomOut {
     padding-top: 1em;
   }
   nav.mainnav ul li span.menu#preface a {
-    font-size: 15.1em;
+    font-size: 10.1em;
+  }
+
+  div.episodes {
+    height: 34em !important;
   }
 }
 @media screen and (max-width: 630px) {
@@ -602,8 +636,8 @@ div.header-frame-test.zoomOut {
     margin: auto;
     display: inline-flex;
   }
-  nav.mainnav ul li#preface {
-    font-size: 2em;
+  nav.mainnav ul li#preface span#preface a {
+    font-size: 10.1em;
   }
 
   .front-overlay {
@@ -628,6 +662,50 @@ div.header-frame-test.zoomOut {
   }
   .header-frame.mobile-only {
     display: block;
+  }
+
+  div.episodes {
+    height: 18em !important;
+  }
+  div.episodes img {
+    width: 91% !important;
+  }
+
+  section#content ul li {
+    display: grid;
+  }
+  section#content ul li span.left {
+    position: relative;
+    font-size: 1.8em;
+    float: left;
+    display: block;
+  }
+  section#content ul li span.right {
+    position: relative;
+    font-size: 1.8em;
+    float: left;
+    margin-left: 0;
+    display: block;
+  }
+}
+@media screen and (max-width: 375px) {
+  div.episodes {
+    height: 15em !important;
+  }
+  div.episodes img {
+    width: 90% !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  nav.mainnav {
+    text-align: center;
+  }
+  nav.mainnav ul li {
+    margin: auto;
+    display: inline-flex;
+  }
+  nav.mainnav ul li#preface span#preface a {
+    font-size: 15.1em;
   }
 }
 

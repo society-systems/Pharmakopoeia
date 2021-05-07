@@ -540,10 +540,14 @@ section#content {
   		background-position: center;
   		background-repeat: no-repeat;
   		//background-size: cover;
-  		background-size: contain;
+  		
+  		//background-size: contain;
+		//margin-bottom: 10em;
+    	//height: 47em;
 
-		margin-bottom: 10em;
-    	height: 47em;
+    	background-size: cover;
+    	margin-bottom: 10em;
+    	height: 46em;
 		img{
 			width: 97%;
 			position: absolute;
@@ -674,7 +678,10 @@ div.header-frame-test{
 /// MEDIUM SCREENS / PADS ///
 /////////////////////////////
 
-@media screen and (max-width: 2560px) and (min-width: 1441px) {
+@media (min-width: 1441px) and (max-width: 2561px) {
+	div.center-wrapper {
+	    max-width: 54%;
+	   }
 	nav.mainnav{
 		ul{
 			display: table;
@@ -687,11 +694,38 @@ div.header-frame-test{
 	    
 	    font-size: 1.1em !important;
 	}
+
+	div.episodes{
+		height: 64em !important;
+		img.frame{
+			width: 98% !important;
+		}
+	}
 	
 }
 
 
 @media screen and (max-width: 1025px) { 
+
+	nav.mainnav {
+		ul {
+			li {
+				margin-left: 2%;
+				&#preface{
+					img{
+						vertical-align: bottom;
+					}
+				}
+				span.menu#preface {
+					padding-top: 2em;
+					a{
+						font-size: 21.1em;
+					}
+				}
+			}
+		}
+	}
+
 	header{
 		font-size: 0.2em;
 	}
@@ -709,6 +743,12 @@ div.header-frame-test{
     	top: 13em;
     	height: inherit;
 	}
+	div.episodes{
+		background-size: cover;
+    	margin-bottom: 10em;
+    	height: 46em;
+	}
+	
 }
 
 @media screen and (max-width: 768px) { 
@@ -722,11 +762,14 @@ div.header-frame-test{
 			    	padding-top: 1em;
 			    	//font-size: 2em;
 			    	a{
-			    		font-size: 15.1em;
+			    		font-size: 10.1em;
 			    	}
 			    }
 			}
 		} 
+	}
+	div.episodes{
+    	height: 34em !important;
 	}
 }
 
@@ -743,7 +786,13 @@ div.header-frame-test{
 			    margin: auto;
 			    display: inline-flex;
 			    &#preface{
-			    	    font-size: 2em;
+			    	    //font-size: 2em;
+			    	    span#preface{
+			    	    	 a{
+			    	    	font-size: 10.1em;
+			    	    	}
+			    	  	 }
+			    	   
 			    }
 			}
 		} 
@@ -771,5 +820,62 @@ div.header-frame-test{
    			display: block;
    		}
 	}	
+
+	div.episodes{
+    	height: 18em !important;
+    	img{
+    		width: 91% !important;
+    	}
+	}
+
+
+	section#content ul li {
+		    display: grid;
+		    span.left{
+		    	position: relative;
+    			font-size: 1.8em;
+    			float: left;
+    			display: block;
+		    }
+		    span.right{
+		    	position: relative;
+    			font-size: 1.8em;
+    			float: left;
+   				margin-left: 0;
+    			display: block;
+		    }
+	}
+
+}
+
+@media screen and (max-width: 375px) {
+	div.episodes{
+    	height: 15em !important;
+    	img{
+    		width: 90% !important;
+    	}
+	}
+}
+
+
+@media screen and (max-width: 320px) {
+	nav.mainnav{
+		text-align: center;
+		ul {
+			li {
+			    margin: auto;
+			    display: inline-flex;
+			    &#preface{
+			    	    //font-size: 2em;
+			    	    span#preface{
+			    	    	 a{
+			    	    	font-size: 15.1em;
+			    	    	}
+			    	  	 }
+			    	   
+			    }
+			}
+		} 
+	}
 
 }
