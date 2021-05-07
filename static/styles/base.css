@@ -459,6 +459,27 @@ section#content div.episodes {
   margin-bottom: 10em;
   height: 46em;
 }
+section#content div.episodes#episode1 {
+  background-image: url("/static/images/episodes/EP-1still.jpg");
+}
+section#content div.episodes#episode2 {
+  background-image: url("/static/images/episodes/EP-2still.jpg");
+}
+section#content div.episodes#episode3 {
+  background-image: url("/static/images/episodes/EP-3still.jpg");
+}
+section#content div.episodes#episode4 {
+  background-image: url("/static/images/episodes/EP-4still.jpg");
+}
+section#content div.episodes#episode5 {
+  background-image: url("/static/images/episodes/EP-5still.jpg");
+}
+section#content div.episodes#episode6 {
+  background-image: url("/static/images/episodes/EP-6still.jpg");
+}
+section#content div.episodes#episode7 {
+  background-image: url("/static/images/episodes/EP-7still.jpg");
+}
 section#content div.episodes img {
   width: 97%;
   position: absolute;
