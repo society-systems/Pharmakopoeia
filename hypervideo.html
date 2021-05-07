@@ -63,10 +63,10 @@
 	<img src="/static/images/divider1.svg" class="divider"/>
 	<section id="front" class="mainsection">
 		
-		<div class="header-frame-test zoomIn header">
+		<div class="header-frame-test zoomIn header glow-flicker">
 			-
 		</div>
-		<div class="header-frame-test zoomOut header">
+		<div class="header-frame-test zoomOut header glow-flicker">
 			-
 		</div>
 	</section>
@@ -87,43 +87,43 @@
 		<div class="center-wrapper">
 			<div class="episodes overlay " id="episode1">
 
-				<img src="/static/images/episodes/EP-1frame.png" class="frame"/>
+				<img src="/static/images/episodes/EP-1frame.png" class="frame" />
 				<img src="/static/images/episodes/EP-1text.png" class="title"/>
 			</div>
 
 			<div class="episodes overlay " id="episode2">
 				
-				<img src="/static/images/episodes/EP-2frame.png" class="frame"/>
+				<img src="/static/images/episodes/EP-2frame.png" class="frame" />
 				<img src="/static/images/episodes/EP-2text.png" class="title"/>
 			</div>
 
 			<div class="episodes overlay " id="episode3">
 				
-				<img src="/static/images/episodes/EP-3frame.png" class="frame"/>
+				<img src="/static/images/episodes/EP-3frame.png" class="frame" />
 				<img src="/static/images/episodes/EP-3text.png" class="title"/>
 			</div>
 
 			<div class="episodes overlay " id="episode4">
 				
-				<img src="/static/images/episodes/EP-4frame.png" class="frame"/>
+				<img src="/static/images/episodes/EP-4frame.png" class="frame" />
 				<img src="/static/images/episodes/EP-4text.png" class="title"/>
 			</div>
 
 			<div class="episodes overlay " id="episode5">
 				
-				<img src="/static/images/episodes/EP-5frame.png" class="frame"/>
+				<img src="/static/images/episodes/EP-5frame.png" class="frame" loading="lazy"/>
 				<img src="/static/images/episodes/EP-5text.png" class="title"/>
 			</div>
 
 			<div class="episodes overlay " id="episode6">
 				
-				<img src="/static/images/episodes/EP-6frame.png" class="frame"/>
+				<img src="/static/images/episodes/EP-6frame.png" class="frame" loading="lazy"/>
 				<img src="/static/images/episodes/EP-6text.png" class="title"/>
 			</div>
 
 			<div class="episodes overlay " id="episode7">
 				<!--<img src="/static/images/episodes/00.jpg" class="glow"/>-->
-				<img src="/static/images/episodes/EP-7frame.png" class="frame"/>
+				<img src="/static/images/episodes/EP-7frame.png" class="frame" loading="lazy"/>
 				<img src="/static/images/episodes/EP-7text.png" class="title"/>
 			</div>
 		</div>
@@ -150,7 +150,7 @@
 			</ul>
 		</div>
 	</section>
-	<audio id="webScore" controls autoplay loading="lazy">
+	<audio id="webScore" controls autoplay loading="lazy" loop="true" autobuffer>
   	<source src="/static/audio/web-score.ogg" type="audio/ogg">
   	<source src="/static/audio/web-score.mp3" type="audio/mpeg">
   	Your browser does not support the audio element.
@@ -166,5 +166,53 @@
 	  x.pause(); 
 	} 
 	</script>
+	<script>
+
+function setCookie(c_name,value,exdays)
+{
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+
+function getCookie(c_name)
+{
+    var i,x,y,ARRcookies=document.cookie.split(";");
+    for (i=0;i<ARRcookies.length;i++)
+    {
+      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+      x=x.replace(/^\s+|\s+$/g,"");
+      if (x==c_name)
+        {
+        return unescape(y);
+        }
+      }
+}
+
+var song = document.getElementsByTagName('audio')[0];
+var played = false;
+var tillPlayed = getCookie('timePlayed');
+function update()
+{
+    if(!played){
+        if(tillPlayed){
+        song.currentTime = tillPlayed;
+        song.play();
+        played = true;
+        }
+        else {
+                song.play();
+                played = true;
+        }
+    }
+
+    else {
+    setCookie('timePlayed', song.currentTime);
+    }
+}
+setInterval(update,1000);
+</script>
 </body>
 </html>

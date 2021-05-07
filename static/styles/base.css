@@ -286,7 +286,7 @@ nav.mainnav ul li {
   display: block;
   float: left;
   line-height: 18px;
-  margin-left: 60px;
+  margin-left: 2%;
   vertical-align: -webkit-baseline-middle !important;
 }
 nav.mainnav ul li#player {
@@ -439,6 +439,7 @@ section#content ul {
 section#content ul li {
   display: flex;
   padding-bottom: 1em;
+  margin-left: 2%;
 }
 section#content ul li span.left {
   position: absolute;
@@ -452,7 +453,7 @@ section#content ul li span.right {
 }
 section#content div.episodes {
   background-image: url("/static/images/episodes/00.jpg");
-  background-attachment: fixed;
+  background-attachment: unset;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -485,9 +486,9 @@ section#content div.episodes img {
   position: absolute;
 }
 section#content div.episodes img.title {
-  padding-top: 16%;
+  padding-top: 4%;
   left: 7%;
-  width: 90%;
+  width: 88%;
 }
 
 div.header-frame-test {
