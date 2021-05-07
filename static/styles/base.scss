@@ -354,6 +354,7 @@ nav.mainnav {
 				}
 
 			&#player{
+					padding-top: 0.7em;
 					margin-left: 0;
 				}
 
@@ -578,7 +579,16 @@ div.header-frame-test{
     height: auto !important;
     top: 0;
     width: 100%;
+    &.big-only{
+    	display: block;
+    }
+    &.mobile-only{
+    	display: none;
+    }
 }
+
+
+
 
 .glow{
 	//animation: float 6s ease-in-out infinite;
@@ -586,6 +596,14 @@ div.header-frame-test{
 	 -webkit-filter: drop-shadow( 4px 4px 3px $color_text_bright);
      filter: drop-shadow( 4px 4px 3px $color_text_bright);
 }
+
+.glow-flicker{
+	
+}
+
+
+
+
 
 .zoomIn{
 	animation: zoomin 20s infinite ;
@@ -697,6 +715,19 @@ div.header-frame-test{
 	body#remedies h1 {
     font-size: 2.5em;
 	}
+	nav.mainnav{
+		ul {
+			li {
+			    span.menu#preface{
+			    	padding-top: 1em;
+			    	//font-size: 2em;
+			    	a{
+			    		font-size: 15.1em;
+			    	}
+			    }
+			}
+		} 
+	}
 }
 
 
@@ -705,13 +736,40 @@ div.header-frame-test{
 /////////////////////////////
 
 @media screen and (max-width: 630px) {
-	h1 {
-		font-size: 6em;
+	nav.mainnav{
+		text-align: center;
+		ul {
+			li {
+			    margin: auto;
+			    display: inline-flex;
+			    &#preface{
+			    	    font-size: 2em;
+			    }
+			}
+		} 
 	}
-	h2 {
-		padding-top: 0.2em;
+	.front-overlay{
+		width: 70% !important;
+		top: 78em !important;
+    	right: 8em !important;
+    	z-index: 300;
 	}
-	section#front {
-	height: 85%;
+
+	div.header-frame-test {
+    	top: 0;
 	}
+
+	.header-frame{
+		position: absolute !important;
+   		height: auto !important;
+   		top: 0;
+   		width: 100%;
+   		&.big-only{
+   			display: none;
+   		}
+   		&.mobile-only{
+   			display: block;
+   		}
+	}	
+
 }
