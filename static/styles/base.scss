@@ -567,17 +567,27 @@ section#content {
 
 	div.episodes{
 		background-image: url("/static/images/episodes/00.jpg");
-  		//background-attachment: fixed;
-  		background-attachment: unset;
+  		background-attachment: fixed;
+  		//background-attachment: unset;
+  		
   		background-position: center;
   		background-repeat: no-repeat;
+  		
   		//background-size: cover;
   		
+
+
   		//background-size: contain;
 		//margin-bottom: 10em;
     	//height: 47em;
 
     	background-size: cover;
+    	
+    	background-position: center;
+  		background-repeat: repeat;
+  		background-size: 80%;
+
+
     	margin-bottom: 10em;
     	height: 46em;
 
