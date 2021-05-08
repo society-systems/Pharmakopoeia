@@ -144,7 +144,7 @@ a:hover {
   color: #B9FF00;
 }
 
-b {
+.sans-bold {
   font-family: "NotCourierSans-Bold", "Montserrat", Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
