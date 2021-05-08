@@ -391,6 +391,9 @@ section.mainsection.compendium img {
   height: 44em;
   padding-bottom: 1em;
 }
+section.mainsection.first {
+  margin-top: 23%;
+}
 
 div.center-wrapper {
   max-width: 1000px;
@@ -646,6 +649,7 @@ div.header-frame-test.zoomOut {
   }
 
   nav.mainnav ul {
+    width: 100%;
     display: table;
     margin: auto;
   }

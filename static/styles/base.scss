@@ -473,6 +473,9 @@ section.mainsection {
     		padding-bottom: 1em;
     	}
 	}
+	&.first{
+		margin-top: 23%;
+	}
 	
 }
 
@@ -792,6 +795,7 @@ div.header-frame-test{
 	   }
 	nav.mainnav{
 		ul{
+			width: 100%;
 			display: table;
     		margin: auto;
 		}
