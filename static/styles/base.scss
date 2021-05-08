@@ -232,6 +232,13 @@ a {
 	@include special_font;
 }
 
+.headline{
+	@include headline_font;
+}
+
+.centered{
+	text-align: center;
+}
 
 .bright-text{
 	color: $color_text_bright;
@@ -374,6 +381,8 @@ nav.mainnav {
 
 			a {
 				@include bold_font;
+
+				text-align: center;
 
 				text-transform: uppercase;
 				font-size: 18px;
@@ -702,7 +711,7 @@ div.header-frame-test{
 }
 
 .float{
-	animation: float 1.5s ease-in-out infinite;
+	animation: float 5.5s ease-in-out infinite;
 	
 	 -webkit-filter: drop-shadow( 4px 4px 3px $color_text_bright);
      filter: drop-shadow( 4px 4px 3px $color_text_bright);

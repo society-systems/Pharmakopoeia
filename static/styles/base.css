@@ -152,6 +152,15 @@ a:hover {
   font-weight: 700;
 }
 
+.headline {
+  font-family: "Luminari-Regular", "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.centered {
+  text-align: center;
+}
+
 .bright-text {
   color: #B9FF00;
 }
@@ -305,6 +314,7 @@ nav.mainnav ul li img {
 nav.mainnav ul li a {
   font-family: "NotCourierSans-Bold", "Montserrat", Arial, Helvetica, sans-serif;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0.03em;
@@ -582,7 +592,7 @@ div.header-frame-test.zoomOut {
 }
 
 .float {
-  animation: float 1.5s ease-in-out infinite;
+  animation: float 5.5s ease-in-out infinite;
   -webkit-filter: drop-shadow(4px 4px 3px #B9FF00);
   filter: drop-shadow(4px 4px 3px #B9FF00);
 }
