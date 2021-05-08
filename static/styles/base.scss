@@ -211,12 +211,12 @@ img {
 }
 
 a {
-	@include headline_font;
-	font-size: 1.5em;
+	@include bold_font;
+	//font-size: 1.5em;
 	letter-spacing: 0.1em;
-	text-transform: uppercase;
+	//text-transform: uppercase;
 	color: $color_text;
-	text-decoration: none;
+	text-decoration: underline;
 
 	&:hover {
 		color: $color_text_less;
@@ -540,6 +540,14 @@ section#content {
 			color: red;
 		}
 	}
+
+	h3{
+		@include bold_font;
+		font-size: 2em;
+		text-align: center;
+		padding-bottom: 2em;
+	}
+
 	img.download{
 		display: block;
 		margin: auto;

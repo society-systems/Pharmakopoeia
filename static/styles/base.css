@@ -132,13 +132,11 @@ img.extend_size {
 }
 
 a {
-  font-family: "Luminari-Regular", "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: "NotCourierSans-Bold", "Montserrat", Arial, Helvetica, sans-serif;
   font-weight: 700;
-  font-size: 1.5em;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: #F8C8C5;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover {
   color: #B9FF00;
@@ -455,6 +453,13 @@ section#content h1.special {
 }
 section#content h1.special.emphasis-text {
   color: red;
+}
+section#content h3 {
+  font-family: "NotCourierSans-Bold", "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  padding-bottom: 2em;
 }
 section#content img.download {
   display: block;
