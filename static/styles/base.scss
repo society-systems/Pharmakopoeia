@@ -701,6 +701,13 @@ div.header-frame-test{
     filter: drop-shadow( 4px 4px 3px $color_text_bright);
 }
 
+.float{
+	animation: float 1.5s ease-in-out infinite;
+	
+	 -webkit-filter: drop-shadow( 4px 4px 3px $color_text_bright);
+     filter: drop-shadow( 4px 4px 3px $color_text_bright);
+}
+
 
 
 

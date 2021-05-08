@@ -581,6 +581,12 @@ div.header-frame-test.zoomOut {
   filter: drop-shadow(4px 4px 3px #B9FF00);
 }
 
+.float {
+  animation: float 1.5s ease-in-out infinite;
+  -webkit-filter: drop-shadow(4px 4px 3px #B9FF00);
+  filter: drop-shadow(4px 4px 3px #B9FF00);
+}
+
 .zoomIn {
   animation: zoomin 20s infinite;
 }
