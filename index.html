@@ -14,6 +14,7 @@
 	<meta property="og:type" content="website" /> 
 
 	<link rel="stylesheet" type="text/css" href="/static/styles/base.css" />
+
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 	<script type="text/javascript">
 	    $(document).ready(function(){
@@ -28,7 +29,14 @@
 </head>
 
 <body>
-<audio id="webScore" controls autoplay loading="lazy">
+
+<div class="main-loader">
+  <span class="loader1"></span>
+  <span class="loader2"></span>
+  <span class="loader3"></span>
+</div>
+
+<audio id="webScore" controls preload="auto" loading="lazy">
   	<source src="/static/audio/web-scoreM.ogg" type="audio/ogg">
   	<source src="/static/audio/web-scoreM.mp3" type="audio/mpeg">
   	Your browser does not support the audio element.
@@ -61,6 +69,33 @@
 	  x.pause(); 
 	} 
 	</script>
+
+	<script>
+	$(window).load(function(){
+  	$(".main-loader").fadeOut();
+	});
+	</script>
+
+	<script>
+	const startAudio = async () => {
+  	const audio = document.getElementById("webScore");
+
+  	try {
+	      await audio.play();
+	
+	      audio.setAttribute('autoplay', true);
+	
+	      console.log('audio started playing successfully');
+	  } catch (err) {
+	    console.log(err, 'audio play error');
+	    // do stuff in case your video is unavailable to play/autoplay
+	  }
+	}
+	
+	setTimeout(startAudio, 5000)
+
+	</script>
+
 </body>
 
 </html>
