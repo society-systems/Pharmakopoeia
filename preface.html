@@ -24,6 +24,7 @@
 </head>
 
 <body class="iffs-debug">
+	<!--
 	<header >
 		
 			<nav class="mainnav">
@@ -39,12 +40,13 @@
 			</nav>
 		
 	</header>
+	-->
 	<section id="front" class="mainsection">
 		
-		<div class="header-frame-test zoomIn header">
+		<div class="header-frame-test zoomIn header glow-flicker">
 			-
 		</div>
-		<div class="header-frame-test zoomOut header">
+		<div class="header-frame-test zoomOut header glow-flicker">
 			-
 		</div>
 
@@ -76,21 +78,6 @@
 	</section>
 
 
-	<audio id="webScore" controls autoplay loading="lazy">
-  	<source src="/static/audio/web-score.ogg" type="audio/ogg">
-  	<source src="/static/audio/web-score.mp3" type="audio/mpeg">
-  	Your browser does not support the audio element.
-	</audio>
-	<script>
-	var x = document.getElementById("webScore"); 
 	
-	function playAudio() { 
-	  x.play(); 
-	} 
-	
-	function pauseAudio() { 
-	  x.pause(); 
-	} 
-	</script>
 </body>
 </html>
