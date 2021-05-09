@@ -823,6 +823,7 @@ div.header-frame-test{
     }
     &.fixed-frame{
     	    position: fixed !important;
+    	    z-index: 3000;
     }
 }
 

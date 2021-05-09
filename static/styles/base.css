@@ -714,6 +714,7 @@ div.header-frame-test.zoomOut {
 }
 .header-frame.fixed-frame {
   position: fixed !important;
+  z-index: 3000;
 }
 
 .small-header {
