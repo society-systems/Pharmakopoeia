@@ -727,6 +727,13 @@ div.header-frame-test.zoomOut {
   left: 35%;
 }
 
+.remedies-header {
+  padding-top: 2em;
+  height: 35em;
+  display: block;
+  margin: auto;
+}
+
 .glow {
   -webkit-filter: drop-shadow(4px 4px 3px #B9FF00);
   filter: drop-shadow(4px 4px 3px #B9FF00);
