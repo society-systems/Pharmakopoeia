@@ -827,12 +827,12 @@ div.header-frame-test{
 }
 
 .small-header{
-	height: 12em;
+	height: 16em;
     display: block;
     margin: auto;
     &#headerAR{
     	    position: absolute;
-    		left: 45%;
+    		left: 35%;
     }
 }
 
@@ -967,7 +967,10 @@ div.header-frame-test{
     	}
 	}
 	.small-header {
-		height: 20em;
+		height: 33em;
+		&#headerAR{
+			left: 39%;
+		}
 	}
 
 	section.mainsection.remedies{

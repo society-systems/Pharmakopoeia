@@ -717,13 +717,13 @@ div.header-frame-test.zoomOut {
 }
 
 .small-header {
-  height: 12em;
+  height: 16em;
   display: block;
   margin: auto;
 }
 .small-header#headerAR {
   position: absolute;
-  left: 45%;
+  left: 35%;
 }
 
 .glow {
@@ -824,7 +824,10 @@ div.header-frame-test.zoomOut {
   }
 
   .small-header {
-    height: 20em;
+    height: 33em;
+  }
+  .small-header#headerAR {
+    left: 39%;
   }
 
   section.mainsection.remedies {
