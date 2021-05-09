@@ -546,7 +546,7 @@ section.mainsection.compendium img {
   padding-bottom: 1em;
 }
 section.mainsection.first {
-  margin-top: 23%;
+  margin-top: 20%;
 }
 
 div.center-wrapper {
@@ -737,6 +737,11 @@ div.header-frame-test.zoomOut {
 .glow {
   -webkit-filter: drop-shadow(4px 4px 3px #B9FF00);
   filter: drop-shadow(4px 4px 3px #B9FF00);
+}
+
+.glow-few {
+  -webkit-filter: drop-shadow(1px 1px 3px #B9FF00);
+  filter: drop-shadow(1px 1px 3px #B9FF00);
 }
 
 .glow-flicker {

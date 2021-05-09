@@ -624,7 +624,7 @@ section.mainsection {
     	}
 	}
 	&.first{
-		margin-top: 23%;
+		margin-top: 20%;
 	}
 	
 }
@@ -851,6 +851,13 @@ div.header-frame-test{
 	
 	 -webkit-filter: drop-shadow( 4px 4px 3px $color_text_bright);
      filter: drop-shadow( 4px 4px 3px $color_text_bright);
+}
+
+.glow-few{
+	//animation: flicker 1.5s ease-in-out infinite;
+	
+	 -webkit-filter: drop-shadow( 1px 1px 3px $color_text_bright);
+     filter: drop-shadow( 1px 1px 3px $color_text_bright);
 }
 
 .glow-flicker{
