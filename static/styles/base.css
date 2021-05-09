@@ -142,6 +142,12 @@ a:hover {
   color: #B9FF00;
 }
 
+.play-score {
+  color: #0000ff;
+  position: absolute;
+  left: 1em;
+}
+
 .sans-bold {
   font-family: "NotCourierSans-Bold", "Montserrat", Arial, Helvetica, sans-serif;
   font-weight: 700;

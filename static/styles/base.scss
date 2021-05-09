@@ -123,6 +123,7 @@ $color_text_emphasis: #FF0C00;
 
 $color_text_blue: #FF0C00;
 
+$color_play-score: #0000ff;
 
 ///////////////////////
 ////// SIZES ////////
@@ -224,6 +225,11 @@ a {
 	}
 }
 
+.play-score {
+	color: $color_play-score;
+	position: absolute;
+    left: 1em;
+}
 
 .sans-bold {
 	@include bold_font;
